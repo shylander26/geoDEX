@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gdbConfiguration>
+  <gdbs>
+    <parentGDB>
+      <server name="intprod">
+        <activeGDB name="spat"></activeGDB>
+        <replicas>
+          <replica name="Geog"></replica>
+          <replica name="Energy"></replica>
+          <replica name="Metals"></replica>
+          <replica name="Financial"></replica>
+          <replica name="Media"></replica>
+        </replicas>
+        <users>
+          <user name="admin1">
+            <pwd>!Planet0</pwd>
+          </user>
+          <user name="analyst1">
+            <pwd>!Planet@1</pwd>
+          </user>
+          <user name="admin2">
+            <pwd>Planet@2</pwd>
+          </user>
+          <user name="analyst2">
+            <pwd>Planet@3</pwd>
+          </user>
+        </users>
+      </server>
+    </parentGDB>
+    <childGDBs>
+      <childGDB>
+        <server name="intdev">
+          <activeGDB name="spatchild2"></activeGDB>
+          <replica release="153" prefix="Dev"></replica>
+          <users>
+            <user name="admin1">
+              <pwd>!Planet0</pwd>
+            </user>
+            <user name="admin2">
+              <pwd>Planet@2</pwd>
+            </user>
+          </users>
+        </server>
+      </childGDB>
+      <childGDB>
+        <server name="intstage">
+        <activeGDB name="spatchild1"></activeGDB>
+        <replica release="152" prefix="Staging"></replica>
+        <users>
+          <user name="admin1">
+            <pwd>!Planet0</pwd>
+          </user>
+          <user name="admin2">
+            <pwd>Planet@2</pwd>
+          </user>
+        </users>
+        </server>
+      </childGDB>
+      <childGDB>
+        <server name="extprod1">
+          <activeGDB name="spatchild1"></activeGDB>
+          <replica release="152" prefix="Prod1"></replica>
+          <users>
+            <user name="admin1">
+              <pwd>!Planet0Crunch</pwd>
+            </user>
+            <user name="admin2">
+              <pwd>Planet@2</pwd>
+            </user>
+         </users>
+        </server>
+      </childGDB>
+      <childGDB>
+        <server name="extprod2">
+          <activeGDB name="spatchild1"></activeGDB>
+          <replica release="152" prefix="Prod2"></replica>
+          <users>
+            <user name="admin1">
+              <pwd>!Planet0Crunch</pwd>
+            </user>
+            <user name="Products">
+              <pwd>Planet@2</pwd>
+            </user>
+          </users>
+        </server>
+      </childGDB>
+    </childGDBs>
+  </gdbs>
+</gdbConfiguration>
